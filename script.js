@@ -7,7 +7,21 @@ preInit();
 
 const myOrigin = new Origin(canvas);
 const particles = [];
-const colors = ["#FFEBB2", "#E9A89B", "#D875C7", "#912BBC", "#40bfbf"];
+// const colors = ["#FFEBB2", "#E9A89B", "#D875C7", "#912BBC", "#40bfbf"];
+const colors = [
+    "#ff1c1cb3",
+    "#e73f1db3",
+    "#d9ff1eb3",
+    "#ff1c51b3",
+    "#ffff1db3",
+];
+// const colors = [
+// "#31d331b3",
+// "#38ffffb3",
+// "#d9ff1eb3",
+// "#2bff1cb3",
+// "#1d1dffb3"
+// ]
 const start = Date.now();
 
 function getTime() {
@@ -37,7 +51,7 @@ function init() {
 }
 
 function circularMotion(particle) {
-    const {rate, radius, startPos} = particle.prop;
+    const { rate, radius, startPos } = particle.prop;
     const t = getTime() * 0.001 * rate;
     myOrigin.setPosition(
         particle,
@@ -61,7 +75,6 @@ function eachFrame() {
     );
     backgroundParticle.draw();
     delete backgroundParticle;
-    
 }
 
 function initialBackground() {
