@@ -15,12 +15,21 @@ const particles = [];
 //     "#ff1c51b3",
 //     "#ffff1db3",
 // ];
+// const colors = [
+// "#31d331b3",
+// "#38ffffb3",
+// "#d9ff1eb3",
+// "#2bff1cb3",
+// "#1d1dffb3",
+// ]
 const colors = [
-"#31d331b3",
-"#38ffffb3",
-"#d9ff1eb3",
-"#2bff1cb3",
-"#1d1dffb3"
+"#791aff",
+"#2537ff",
+"#1cffff",
+"#2bff1c",
+"#ffff22",
+"#ff5416",
+"#ff1919",
 ]
 const start = Date.now();
 
@@ -33,7 +42,7 @@ function init() {
     const numberOfParticles = 80;
     for (let i = 0; i < numberOfParticles; i++) {
         const prop = {
-            radius: random(5, 110),
+            radius: random(15, 120),
             rate: Math.random() * 1 + 0.9,
             startPos: Math.random() * 100,
         };
