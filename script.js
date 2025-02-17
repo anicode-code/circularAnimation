@@ -22,15 +22,22 @@ const particles = [];
 // "#2bff1cb3",
 // "#1d1dffb3",
 // ]
-const colors = [
-"#791aff",
-"#2537ff",
-"#1cffff",
-"#2bff1c",
-"#ffff22",
-"#ff5416",
-"#ff1919",
-]
+// const colors = [
+// "#791aff",
+// "#2537ff",
+// "#1cffff",
+// "#2bff1c",
+// "#ffff22",
+// "#ff5416",
+// "#ff1919",
+// ]
+// const colors = ["hwb(90 10% 0%)"];
+const colors = [];
+
+for (let i = 0; i < 10000; i++) {
+    colors.push(`hwb(${Math.floor(Math.random() * 361)} ${Math.floor(Math.random() * 11 + 10)}% 0%)`);
+}
+
 const start = Date.now();
 
 function getTime() {
@@ -43,7 +50,7 @@ function init() {
     for (let i = 0; i < numberOfParticles; i++) {
         const prop = {
             radius: random(15, 120),
-            rate: Math.random() * 1 + 0.9,
+            rate: Math.random() * 1 + 1.2,
             startPos: Math.random() * 100,
         };
         particles.push(
